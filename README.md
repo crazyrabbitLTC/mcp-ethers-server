@@ -2,6 +2,10 @@
 
 A Model Context Protocol server for interacting with Ethereum wallets and networks using Ethers.js v6. This server provides LLMs with a standardized interface to interact with Ethereum networks, smart contracts, and wallets.
 
+<a href="https://glama.ai/mcp/servers/j75jbdup5m">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/j75jbdup5m/badge" alt="Ethers Wallet MCP server" />
+</a>
+
 ## Overview
 
 The MCP Ethers Wallet server implements the [Model Context Protocol](https://modelcontextprotocol.io) specification, providing LLMs with tools to:
@@ -153,4 +157,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Author
 
-Dennison Bertram (dennison@tally.xyz) 
+Dennison Bertram (dennison@tally.xyz)
