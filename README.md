@@ -1,4 +1,5 @@
 # MCP Ethers Wallet
+[![smithery badge](https://smithery.ai/badge/@crazyrabbitLTC/mcp-ethersjs-server)](https://smithery.ai/server/@crazyrabbitLTC/mcp-ethersjs-server)
 
 A Model Context Protocol (MCP) server that provides Ethereum wallet functionality using ethers.js v6.
 
@@ -40,6 +41,15 @@ Replace `pathTo/ethers-server` with the actual path to your installation directo
 
 ## Installation
 
+### Installing via Smithery
+
+To install Ethers Wallet for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@crazyrabbitLTC/mcp-ethersjs-server):
+
+```bash
+npx -y @smithery/cli install @crazyrabbitLTC/mcp-ethersjs-server --client claude
+```
+
+### Manual Installation
 ```bash
 # Clone the repository
 git clone https://github.com/yourusername/ethers-server.git

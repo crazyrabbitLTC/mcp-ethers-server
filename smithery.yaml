@@ -1,0 +1,43 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - alchemyApiKey
+      - infuraApiKey
+    properties:
+      alchemyApiKey:
+        type: string
+        description: Your Alchemy API key for connecting to the Ethereum network.
+      infuraApiKey:
+        type: string
+        description: Your Infura API key for connecting to the Ethereum network.
+      defaultNetwork:
+        type: string
+        default: mainnet
+        description: Optional default Ethereum network (e.g., mainnet, polygon).
+      logLevel:
+        type: string
+        default: info
+        description: Logging level for the server (e.g., error, warn, info, debug).
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({
+      command: 'node',
+      args: ['build/src/mcpServer.js'],
+      env: {
+        ALCHEMY_API_KEY: config.alchemyApiKey,
+        INFURA_API_KEY: config.infuraApiKey,
+        DEFAULT_NETWORK: config.defaultNetwork || 'mainnet',
+        LOG_LEVEL: config.logLevel || 'info'
+      }
+    })
+  exampleConfig:
+    alchemyApiKey: your_alchemy_api_key_here
+    infuraApiKey: your_infura_api_key_here
+    defaultNetwork: mainnet
+    logLevel: info
